@@ -11,6 +11,11 @@
 		<property name="name" value="amol" />
 		<property name="id" value="2" />
 	</bean>
+	<!-- Definition for textEditor bean -->
+   <bean id = "textEditor" class = "com.programcreek.helloworld.controller.TextEditor">
+      <property name = "spellChecker" ref = "di_spellChecker"/>
+   </bean>
 
-
+   <!-- Definition for spellChecker bean -->
+   <bean id = "di_spellChecker" class = "com.programcreek.helloworld.controller.SpellChecker"></bean>
 </beans>

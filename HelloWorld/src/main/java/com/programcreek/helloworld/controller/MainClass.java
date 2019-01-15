@@ -23,6 +23,12 @@ public class MainClass {
 		  HelloSpring helloSpring1=(HelloSpring)  factory.getBean("helloWorld");
 		  System.out.println("Using BeanFactory interface-----------"+helloSpring1);
 		 
+		 /* Setter based 
+		  dependency injection
+		  */
+		  TextEditor te = (TextEditor) context.getBean("textEditor");
+	      te.spellCheck();
+	      System.out.println("Texteditor---------"+te);
 		
 	}
 }

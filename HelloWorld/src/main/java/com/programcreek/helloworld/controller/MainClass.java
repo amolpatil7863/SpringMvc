@@ -26,9 +26,13 @@ public class MainClass {
 		 /* Setter based 
 		  dependency injection
 		  */
+		  /*TextEditor te = (TextEditor) context.getBean("textEditor");
+	      te.spellCheck();
+	      System.out.println("Texteditor---------"+te);*/
+		
+		  
+		  
 		  TextEditor te = (TextEditor) context.getBean("textEditor");
 	      te.spellCheck();
-	      System.out.println("Texteditor---------"+te);
-		
 	}
 }

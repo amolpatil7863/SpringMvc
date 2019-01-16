@@ -19,6 +19,6 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 		</property>
 	</bean>
 	
-	<bean id="bean_address" class="com.programcreek.helloworld.controller.Address"></bean>
+	
 	
 </beans>

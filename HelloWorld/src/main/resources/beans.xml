@@ -11,6 +11,22 @@
 		<property name="name" value="amol" />
 		<property name="id" value="2" />
 	</bean>
+	
+<!-- 	setter based DI -->
+	
+	<!-- Definition for textEditor bean -->
+  <!--  <bean id = "textEditor" class = "com.programcreek.helloworld.controller.TextEditor">
+      <property name = "spellChecker" ref = "di_spellChecker"/>
+   </bean> -->
 
+   <!-- Definition for spellChecker bean -->
+<!--    <bean id = "di_spellChecker" class = "com.programcreek.helloworld.controller.SpellChecker"></bean> -->
+   
+<!--    closes setter based DI -->
 
+   <bean id = "textEditor" class = "com.programcreek.helloworld.controller.TextEditor">
+      <constructor-arg ref = "spellChecker_ref"/>
+   </bean>
+   <!-- Definition for spellChecker bean -->
+   <bean id = "spellChecker_ref" class = "com.programcreek.helloworld.controller.SpellChecker"></bean>
 </beans>

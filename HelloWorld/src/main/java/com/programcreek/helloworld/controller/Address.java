@@ -1,5 +1,8 @@
 package com.programcreek.helloworld.controller;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Address {
 
 	private String name;

@@ -29,4 +29,8 @@
    </bean>
    <!-- Definition for spellChecker bean -->
    <bean id = "spellChecker_ref" class = "com.programcreek.helloworld.controller.SpellChecker"></bean>
+   
+   <bean id = "empoyeeBean" class = "com.programcreek.helloworld.controller.Employee" autowire="default"></bean>
+  
+   
 </beans>

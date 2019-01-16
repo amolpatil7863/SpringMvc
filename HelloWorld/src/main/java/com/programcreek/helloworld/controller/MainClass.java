@@ -1,6 +1,7 @@
 package com.programcreek.helloworld.controller;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 @SuppressWarnings("deprecation")
@@ -34,5 +35,23 @@ public class MainClass {
 		  
 		  TextEditor te = (TextEditor) context.getBean("textEditor");
 	      te.spellCheck();
+	      
+	      
+	      /*Autowire bean using 
+	      autodetect mode */
+	     ApplicationContext context1 = new ClassPathXmlApplicationContext("application-context.xml"); 
+	     EmployeeBean emp= (EmployeeBean) context1.getBean("employee");
+	     System.out.println("EMP BEAN:-"+emp);
+	     
+	     
+	  /*   Application aplication=(Application) context1.getBean("application");
+	     System.out.println("Using by name tag:- "+aplication);*/
+	     
+	     
+	     Customer customer=(Customer) context1.getBean("customer");
+	     System.out.println("Customer:-  "+customer);
+	     ApplicationContext context2 = new AnnotationConfigApplicationContext(ApplicationConfiguration.class);
+	     DemoManagerImpl demo=(DemoManagerImpl) context2.getBean("demoService");
+	     System.out.println("demo configuration:-"+ demo.getServiceName());
 	}
 }

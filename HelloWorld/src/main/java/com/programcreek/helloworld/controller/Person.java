@@ -1,0 +1,21 @@
+package com.programcreek.helloworld.controller;
+
+public class Person {
+
+	private String person_name;
+
+	public String getPerson_name() {
+		return person_name;
+	}
+
+	public void setPerson_name(String person_name) {
+		this.person_name = person_name;
+	}
+
+	@Override
+	public String toString() {
+		return "Person [person_name=" + person_name + "]";
+	}
+	
+	
+}

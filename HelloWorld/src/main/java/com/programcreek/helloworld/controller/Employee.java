@@ -1,7 +1,10 @@
 package com.programcreek.helloworld.controller;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Employee {
 	
+	@Autowired
 	private Address address;
 
 	public void setAddress(Address bean_address) {
@@ -12,9 +15,10 @@ public class Employee {
 		System.out.println("-----------------"+this.address);
 	}
 
-	public static void main(String dfj[]) {
-		System.out.println("Employee class");
-		Employee emp=new Employee();
-		emp.show();
+	@Override
+	public String toString() {
+		return "Employee [address=" + address + "]";
 	}
+
+	
 }

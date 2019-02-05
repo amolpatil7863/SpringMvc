@@ -10,7 +10,7 @@ public class HelloSpring {
 	
 	public HelloSpring() {
 		super();
-		System.out.println("Initiasing HelloSpring bean class");
+		System.out.println("Initiasing HelloSpring bean class"+this.id+"--"+this.getName());
 			}
 
 	public String getName() {

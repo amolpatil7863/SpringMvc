@@ -7,7 +7,6 @@ public class EmployeeBean
  
     public EmployeeBean() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public DepartmentBean getDepartmentBean() {

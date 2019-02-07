@@ -7,11 +7,17 @@ public class Test {
 
 	public static void main(String[] args) {
 		 ApplicationContext context = new ClassPathXmlApplicationContext("bean.xml");
+		 try{
+		 Profile company=(Profile) context.getBean(Profile.class);
 		 
-		 Profile company=(Profile) context.getBean("company");
+		 
+		 System.out.println(company.getClass());
 		 System.out.println(company);
 		 company.printAge();
 		 company.printName();
+		 }catch (Exception e) {
+			 System.out.println(e.getCause());
+		}
 	}
 
 }

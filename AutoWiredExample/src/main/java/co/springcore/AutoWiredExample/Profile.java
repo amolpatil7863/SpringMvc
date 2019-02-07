@@ -1,11 +1,11 @@
 package co.springcore.AutoWiredExample;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Profile {
-	   @Autowired
-	   @Qualifier("student1")
+	  /* @Autowired
+	   @Qualifier("student1")*/
 	   private Student student;
 
 	   public Profile(){

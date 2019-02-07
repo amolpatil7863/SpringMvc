@@ -8,19 +8,19 @@
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<context:annotation-config />
-
+<context:component-scan base-package="co.springcore.AutoWiredExample" />
 	<!-- Definition for student bean -->
-	<bean id="company" class="co.springcore.AutoWiredExample.Profile">
+	<!-- <bean id="company" class="co.springcore.AutoWiredExample.Profile">
 	</bean>
-		<!-- Definition for student1 bean -->
+		Definition for student1 bean
 		<bean id="student1" class="co.springcore.AutoWiredExample.Student">
 			<property name="name" value="Zara" />
 			<property name="age" value="11" />
 		</bean>
 
-		<!-- Definition for student2 bean -->
+		Definition for student2 bean
 		<bean id="student2" class="co.springcore.AutoWiredExample.Student">
 			<property name="name" value="Nuha" />
 			<property name="age" value="2" />
-		</bean>
+		</bean> -->
 </beans>

@@ -1,19 +1,23 @@
 package com.spring.mvc.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
-import com.spring.mvc.dao.EmployeeDao;
 import com.spring.mvc.model.Employee;
+
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
+	List<Employee> list = new ArrayList<Employee>();
 
-	@Autowired
-	private EmployeeDao employeeDao;
-	
-	public void saveEmployee(Employee employee) {
-		System.out.println("emp service"+employee);
-		employeeDao.saveEmployee(employee);
+	public Employee addEmployee(Employee employee) {
+		list.add(employee);
+		return employee;
+	}
+
+	public List<Employee> getEmployees() {
+		return list;
 	}
 
 }

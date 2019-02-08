@@ -25,7 +25,7 @@ public class LoginController {
     	employee.setId(1);
     	employee.setName("Steve");
     	employee.setDept("CSE");
-    	employeeService.saveEmployee(employee);
+//    	employeeService.saveEmployee(employee);
     	}catch (Exception e) {
     		e.printStackTrace();
 		}

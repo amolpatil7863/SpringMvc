@@ -7,11 +7,11 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
+
 import com.spring.mvc.model.Employee;
 
 public class EmployeeDAOImpl implements EmployeeDao{
@@ -19,7 +19,9 @@ public class EmployeeDAOImpl implements EmployeeDao{
 	private JdbcTemplate jdbcTemplate;
    
 
-    
+    public EmployeeDAOImpl(DataSource dataSource){
+    	jdbcTemplate=new JdbcTemplate(dataSource);
+    }
 	// Saving a new Employee
     public void saveEmployee(Employee employee)
     {

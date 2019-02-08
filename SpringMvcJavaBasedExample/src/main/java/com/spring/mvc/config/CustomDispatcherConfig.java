@@ -48,13 +48,13 @@ public class CustomDispatcherConfig extends WebMvcConfigurerAdapter {
 		return ds;
 	}
 
-	/*@Bean
+	@Bean
 	public EmployeeDao getUserDao() {
 		
 		System.out.println("DataSource:--"+ getDataSource().getUsername());
 		
 		return new EmployeeDAOImpl(getDataSource());
 	}
-*/	
+	
 	
 }

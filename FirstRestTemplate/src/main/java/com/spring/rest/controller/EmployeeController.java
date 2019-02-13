@@ -5,15 +5,12 @@ package com.spring.rest.controller;
 
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.sping.rest.model.Employee;
 import com.spring.rest.service.EmployeeService;
 
@@ -31,6 +28,7 @@ public class EmployeeController {
 		return employeeService.getEmployee();
 	}
 	
+	//add emp object
 	@RequestMapping(value = "/addemp", method = RequestMethod.POST)
 	public Employee addEmployee(@RequestBody Employee employee,@RequestHeader Map<String,String> headers) {
 		employeeService.addEmployee(employee);

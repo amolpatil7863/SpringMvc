@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Create Profile</title>
+	 
+    <link rel="stylesheet" type="text/css" href="css/Resume/style1.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/Resume/demo.css" media="all" />
+
+<script type="text/javascript">
+function validateform()
+{
+	var v_name=document.personalinfo_form.name.value;
+	 // alert("NAME:"+v_name);
+	if(v_name==null || v_name=="")
+	{
+		alert("Name can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.resumeheadline.value=="" || document.personalinfo_form.resumeheadline.value==null)
+	{
+		alert("Resume Headline can't be blank");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.current_location.selectedIndex=="" ||document.personalinfo_form.current_location.selectedIndex==null)
+	{
+		alert("please select Current location");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.experience.selectedIndex=="" || document.personalinfo_form.experience.selectedIndex==null)
+	{
+		alert("Please select experience");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.preferred_location.selectedIndex=="" || document.personalinfo_form.preferred_location.selectedIndex==null)
+	{
+		alert("Please select Preferred experience");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.mobile.value=="" || document.personalinfo_form.mobile.value==null)
+	{
+	alert("Mobile no can't be blank");
+	return false;
+	}
+	else
+	{
+		return true;
+	}
+	var mob=document.personalinfo_form.mobile.value;
+	if(isNaN(mob)) //checking numeric value
+	{
+		alert("Enter Numeric value only");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.mobile.value.length<10 || document.personalinfo_form.mobile.value.length>10)
+	{
+		alert("Mobile no must be 10 digit long");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.permenantaddress.value=="" || document.personalinfo_form.permenantaddress.value==null)
+	{
+		alert("Permanent Address can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.city.value=="" || document.personalinfo_form.city.value==null)
+	{
+		alert("City can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.dob.value=="" || document.personalinfo_form.dob.value==null)
+	{
+		alert("Date can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.gender.selectedIndex=="" || document.personalinfo_form.gender.selectedIndex==null)
+	{
+		alert("Please select Gender");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.languagesknown.selectedIndex=="" || document.personalinfo_form.languagesknown.selectedIndex==null)
+	{
+		alert("Please select Laguages");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.pincode.value=="" || document.personalinfo_form.pincode.value==null)
+	{
+		alert("Pincode can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(isNaN(document.personalinfo_form.pincode.value)) //checking numeric value
+	{
+		alert("Enter Numeric value only");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.pincode.value.length<6 || document.personalinfo_form.pincode.value.length>6)
+	{
+		alert("Pincode must be 6 digit long");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.personalinfo_form.keyskills.value=="" || document.personalinfo_form.keyskills.value==null)
+	{
+	  alert("KeySkills can't be empty");
+	  return false;
+	}
+	else
+	{
+		return true;
+	}
+
+}
+</script>
+
+    <style>
+        h1 {color:red;text-align:right;}
+    </style>
+	
+
+</head>
+<body>
+     <h1><a href="applicant_logout.jsp">Logout</a></h1>
+    <form action="personalinfo.jsp" method="post" name="personalinfo_form" onsubmit="return validateform()">
+    
+    <div class="container">
+  
+    <br><br><br><br><br><br><font color="white" size=5px;><center>Personal Information</center></font><br>
+    
+	<div  class="form">
+	<form id="contactform"> 
+    
+	<p class="contact"><label for="name">Name:  <font color="red" size="3">*</font></label></p>
+        <input id="name" name="name" placeholder="Name" tabindex="1" type="text">
+        <br>
+        <p class="contact"><label for="resumeheadline">Resume Headline:  <font color="red" size="3">*</font></label></p>
+        <textarea name="resumeheadline" rows="3" cols="30"></textarea>
+        <br>
+            <p class="contact"><label for="currentlocation">Current Location:  <font color="red" size="3">*</font></label></p>
+            <select name="current_location">
+			<option value="-1">Select</option>
+            <option value="kolhapur">Kolhapur</option>
+            <option value="pune">Pune</option>
+            <option value="mumbai">Mumbai</option>
+            </select>
+    <p class="contact"><label for="totalexprience">Total Exprience:  <font color="red" size="3">*</font></label></p>
+	<select name="experience">
+	    <option value="-1">Select</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="2">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="7">6</option>
+        </select>
+  <br>
+  <p class="contact"><label for="preferredlocation">Preferred Location:  <font color="red" size="3">*</font></label></p> 
+	<select name="preferred_location">
+	<option value="-1">Select</option>
+    <option value="kolhapur">Kolhapur</option>
+    <option value="pune">Pune</option>
+    <option value="mumbai">Mumbai</option>
+  </select>
+  <p class="contact"><label for="mobilenumber">Mobile Number:  <font color="red" size="3">*</font></label></p>
+ <input type="text" name="mobile" ><br>
+    <!--<p class="contact"><label for="email">Email:</label></p>
+	<input type="text" name="email" ><br> -->
+    
+	<p class="contact"><label for="permanentaddress:">Permanent Address:  <font color="red" size="3">*</font></label></p><br>
+        <textarea name="permenantaddress" rows="3" cols="30"></textarea>
+	<p class="contact"><label for="city">Home Town/city:  <font color="red" size="3">*</font></label></p>
+	<input type="text" name="city" ><br>
+	<p class="contact"><label for="dob">Date of Birth:  <font color="red" size="3">*</font></label></p>
+	<input type="date" name="dob" >
+	<p class="contact"><label for="gender">Gender:  <font color="red" size="3">*</font></label></p>
+	<select name="gender">
+	    <option value="-1">Select</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+     </select><br><br>
+        
+        <p class="contact"><label for="languagesknown">Laguages Known:  <font color="red" size="3">*</font></label></p>
+        <select name="languagesknown">
+             <optgroup class="optGrp" label="-----------India-----------"></optgroup> 
+			 <option value="-1">Select</option>
+            <option value="English">English</option>
+            <option value="English,Hindi">English,Hindi</option>
+            <option value="English,Hindi,Marathi">English,Hindi,Marathi</option>
+            <option value="English,Hindi,Telagu">English,Hindi,Telagu</option>
+            <option value="English,Hindi,Bangali">English,Hindi,Bangali</option>
+            <option value="English,Hindi,Urdu">English,Hindi,Urdu</option>
+            <option value="English,Hindi,Punjabi">English,Hindi,Punjabi</option>
+            <option value="English,Hindi,kanada">English,Hindi,kanada</option>
+            <option value="English,Hindi,Gujarati">English,Hindi,Gujarati</option>
+            <optgroup class="optGrp" label="-----------Other-----------"></optgroup> 
+            <option value="English,Russian">English,Russian</option>
+            <option value="English,Japanese">English,Japanese</option>
+            <option value="English,German">English,German</option>
+            <option value="English,Italian">English,Italian</option>
+        </select><br><br>
+        
+	<p class="contact"><label for="pincode">Pin Code:  <font color="red" size="3">*</font></label></p>
+	<input type="text" name="pincode" ><br>
+	<p class="contact"><label for="keyskills">Key Skills:  <font color="red" size="3">*</font></label></p>
+	<input type="text" name="keyskills" ><br>
+    <br><br>
+    
+   
+      
+   <input class="buttom" name="submit" id="submit" tabindex="5" value="Save" type="submit">
+ 
+  
+  
+	 
+</form>
+</div>
+    
+</form>
+</body>
+</html>

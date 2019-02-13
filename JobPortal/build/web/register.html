@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<html>
+<head>
+<title>Sign up form for Job Portal applicant</title>
+	 
+    <link rel="stylesheet" type="text/css" href="css/Register/style1.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/Register/demo.css" media="all" />
+    
+<script type="text/javascript">   
+function validateform()
+{
+var invalid=" ";
+var alphaExp = /^[a-zA-Z]+$/;
+var vemail=document.register_form.email.value;
+var j_name=document.register_form.name.value;
+var valid="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"; //only alphabets
+ if(document.register_form.name.value=="" ||document.register_form.name.value==null)
+ {
+	alert("Applicant Name can't be empty");
+	return false;
+ }
+ else
+ {
+ return true;
+ }
+ 
+            
+ if(document.register_form.email.value=="" || document.register_form.email.value==null)
+ {
+	alert("Applicant Email can't be empty");
+	return false;
+ }
+  else
+ {
+ return true;
+ }
+atpos=vemail.indexOf("@");
+dotpos=vemail.lastIndexOf(".");
+if(atpos<1 || (dotpos-atpos<2) )
+{
+	alert("please enter correct email address");
+	return false;
+}
+ else
+ {
+ return true;
+ }
+
+ if(document.register_form.password.value=="" || document.register_form.password.value==null)
+ {
+	alert("Applicant Password can't be empty");
+	return false;
+ }
+  else
+ {
+ return true;
+ }
+ if(document.register_form.password.value.length<7)
+ {
+	alert("Password must be 7 character long");
+	return false;
+ }
+  else
+ {
+ return true;
+ }
+ if(document.register_form.password.value.indexOf(invalid)>-1)
+ {
+		alert("Space is not allowes");
+		return false;
+ }
+  else
+ {
+ return true;
+ }
+ if(document.register_form.repassword.value!=document.register_form.password.value)
+ {
+	alert("Password do not match");
+	return false;
+ }
+  else
+ {
+ return true;
+ }
+ if(document.register_form.gender.selectedIndex=="" || document.register_form.gender.selectedIndex==null)
+ {
+	alert("Please select Gender");
+	return false;
+ }
+  else
+ {
+ return true;
+ }
+ if(document.register_form.phone.value=="" || document.register_form.phone.value==null)
+ {
+	alert("Phone no can't be empty");
+	return false;
+ }
+  else
+ {
+ return true;
+ }
+ if(isNaN(document.register_form.phone.value)) //checking numeric value
+	{
+		alert("Enter Numeric value only");
+		return false;
+	}
+	 else
+ {
+ return true;
+ }
+ if(document.register_form.phone.value.length<10 || document.register_form.phone.value.length>10)
+ {
+	alert("Phone no must be 10 digit long");
+	return false;
+ }
+  else
+ {
+ return true;
+ }
+ if(document.register_form.birthdate.value=="" || document.register_form.birthdate.value==null)
+ {
+	alert("BirthDate can't be empty");
+	return false;
+ }
+  else
+ {
+ return true;
+ }
+}
+
+</script>
+
+</head>
+<body>
+
+    <form name="register_form" action="applicant_register.jsp" method="post" onsubmit="return validateform()">
+	 <div class="banner">	
+            <p class="title">
+			<br><font color="white" size=5px><center>Sign Up for Jobportal Applicant</center></font><br>
+			</p>
+			<li>Already Registered? <a href="login.html" class="banner"> Login here</a></li>
+    </div> 
+	<div class="container">
+	
+			
+	  	  
+      <div  class="form">
+    		<form id="contactform"> 
+    			<p class="contact"><label for="name">Name:  <font color="red" size="3">*</font></label></p> 
+    			<input id="name" name="name" placeholder="First and last name" tabindex="1" type="text"> 
+    			 
+    			<p class="contact"><label for="email">Email:  <font color="red" size="3">*</font></label></p> 
+    			<input id="email" name="email" placeholder="example@domain.com"  type="email"> 
+                
+		
+				 
+				 
+                <p class="contact"><label for="password">Create a password:  <font color="red" size="3">*</font></label></p> 
+    			<input type="password" id="password" name="password"> 
+                <p class="contact"><label for="repassword">Confirm your password:  <font color="red" size="3">*</font></label></p> 
+    			<input type="password" id="repassword" name="repassword"> </br>
+       
+				<select class="select-style gender" name="gender">
+				<option value="-1">Select</option>
+				<option value="m">Male</option>
+				<option value="f">Female</option>
+				
+				</select><br><br>
+			
+            <p class="contact"><label for="phone">Mobile phone:  <font color="red" size="3">*</font></label></p> 
+            <input id="phone" name="phone" placeholder="phone number" type="text"> <br>
+			 
+			<p class="birthdate"><label for="bdate">BirthDate:  <font color="red" size="3">*</font></label></p><br>
+			<input type="text" id="bdate" name="birthdate"> <br>
+		<div class="button">
+            <input class="buttom" name="submit" id="submit" tabindex="5" value="Sign me up!" type="submit" > 
+		</div>	 
+   		</form> 
+		</div>      
+		</div>
+
+	</form>
+
+</body>
+</html>
+

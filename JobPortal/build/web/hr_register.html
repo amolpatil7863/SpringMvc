@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HR Registration Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link rel="stylesheet" type="text/css" href="css/Register/style1.css" media="all" />
+          <link rel="stylesheet" type="text/css" href="css/Register/demo.css" media="all" />
+          <script type="text/javascript">
+             function validateform()
+             {
+                 var j_llpname=document.register_form.llpname.value;
+                 var j_llpin=document.register_form.llpin.value;
+                 var j_hrname=document.register_form.hrname.value;
+                 var j_hremail=document.register_form.hremail.value;
+                 var j_hr_password=document.register_form.hr_password.value;
+                 var j_repassword=document.register_form.repassword.value;
+				 var invalid=" ";
+                 var passw=  /^[A-Za-z]\w{7,14}$/;//7 to 16 characters which contain only characters, numeric digits, underscore and first character must be a letter
+                if(j_llpname==null || j_llpname=="")
+                 {
+                     alert("Company Name can't be blank");  
+                     return false;
+                 }
+                 if(j_llpin==null || j_llpin=="")
+                 {
+                     alert("Company LLPIN can't be blank");  
+                     return false;
+                 }
+                 if(j_hrname==null || j_hrname=="")
+                 {
+                     alert("Hr Name can't be blank");  
+                     return false;
+                 }
+                 if(j_hremail==null || j_hremail=="")
+                 {
+                     alert("Email can't be blank");  
+                     return false;
+                 }
+				 atpos=j_hremail.indexOf("@");
+				dotpos=j_hremail.lastIndexOf(".");
+				if(atpos<1 || (dotpos-atpos<2) )
+				{
+					alert("please enter correct email address");
+					return false;
+				}
+                 if(j_hr_password==null || j_hr_password=="")
+                 {
+                     alert("Password can't be blank");  
+                     return false;
+					 
+                 }
+				if(j_hr_password.length<7)
+				{
+				alert("Password must be 7 character long");
+				return false;
+				}
+		        if(j_hr_password.indexOf(invalid)>-1)
+				{
+					alert("Space is not allowes");
+					return false;
+				}
+				 
+				 if(j_repassword!=j_hr_password )
+				 {
+					 alert("Password do not match");  
+                     return false;
+				 }
+             }
+          </script>
+    </head>
+    <body>
+        <form action="hr_register.jsp" method="post" name="register_form" onsubmit="return validateform()">
+        <div class="container">
+            <br><br><br><br><font color="white" size=10px;><center>Sign Up for Jobportal HR Manager</center></font><br>
+		  
+    <div  class="form">
+    		<form id="contactform" action="register.jsp" method="post"> 
+    			<p class="contact"><label for="name">Company/LLP Name:  <font color="red" size="3">*</font></label></p> 
+    			<input id="name" name="llpname" placeholder="Company Name"  tabindex="1" type="text"> 
+				
+				<p class="contact"><label for="regcode">Company LLPIN:  <font color="red" size="3">*</font></label></p> 
+    			<input id="name" name="llpin" placeholder="Company LLPIN"  tabindex="1" type="text">
+    			 
+				
+				<p class="contact"><label for="hrname">HR Name:  <font color="red" size="3">*</font></label></p> 
+    			<input id="name" name="hrname" placeholder="HR Name"  tabindex="1" type="text"> 
+				
+    			<p class="contact"><label for="email">Email:  <font color="red" size="3">*</font></label></p> 
+    			<input id="email" name="hremail" placeholder="example@domain.com"  type="email"> 
+                
+                 
+    			 
+                     <p class="contact"><label for="password">Create a password:  <font color="red" size="3">*</font></label></p> 
+    			<input type="password" id="password" name="hr_password" > 
+                     <p class="contact"><label for="repassword">Confirm your password:  <font color="red" size="3">*</font></label></p> 
+    			<input type="password" id="repassword" name="repassword" > 
+        
+              
+  
+          
+                    <input class="buttom" name="submit" id="submit" tabindex="5" value="Sign me up!" type="submit"> 
+			 
+			 
+            </form> 
+</div>      
+</div>
+</form>
+ </body>
+</html>

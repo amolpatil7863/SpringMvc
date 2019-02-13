@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Education Details</title>
+	 
+    <link rel="stylesheet" type="text/css" href="css/Resume/style1.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/Resume/demo.css" media="all" />
+     <style>
+        h1 {color:red;text-align:right;}
+    </style>
+<script type="text/javascript">
+function validateform()
+{
+    if(document.education_form.graduation.selectedIndex=="" || document.education_form.graduation.selectedIndex==null)
+	{
+		alert("Please Select Graduation type");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.specialization.selectedIndex=="" || document.education_form.specialization.selectedIndex==null)
+	{
+		alert("Please Select  Branch");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.university_name.value=="" || document.education_form.university_name.value==null)
+	{
+		alert("University Name can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	 if(document.education_form.passoutYear.selectedIndex=="" || document.education_form.passoutYear.selectedIndex==null)
+	{
+		alert("Please Select Passout Year");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	 if(document.education_form.gradingSystem.selectedIndex=="" || document.education_form.gradingSystem.selectedIndex==null)
+	{
+		alert("Please Select Grading system");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.aggregates.value=="" || document.education_form.aggregates.value==null)
+	{
+		alert("Aggregates can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.certificate_name.value=="" || document.education_form.certificate_name.value==null)
+	{
+		alert("Certificate name can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.certificate_body.value=="" || document.education_form.certificate_body.value==null)
+	{
+		alert("Certification body can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.certificationYear.selectedIndex=="" || document.education_form.certificationYear.selectedIndex==null)
+	{
+		alert("Please Select Certification Year");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXBoard.selectedIndex=="" || document.education_form.classXBoard.selectedIndex==null)
+	{
+		alert("Please Select ClassX Board");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXpassoutYear.selectedIndex=="" || document.education_form.classXpassoutYear.selectedIndex==null)
+	{
+		alert("Please Select ClassX passout Year");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXmedium.selectedIndex=="" || document.education_form.classXmedium.selectedIndex==null)
+	{
+		alert("Please Select Medium");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXMarks.value=="" || document.education_form.classXMarks.value==null)
+	{
+		alert("Class X marks can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXCertification_name.value=="" || document.education_form.classXCertification_name.value==null)
+	{
+		alert("Class X Certification Name can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXCertificationBody.value=="" || document.education_form.classXCertificationBody.value==null)
+	{
+		alert("Class X Certification body can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXIIBoard.selectedIndex=="" || document.education_form.classXIIBoard.selectedIndex==null)
+	{
+		alert("Please Select ClassXII board");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXIIpassoutYear.selectedIndex=="" || document.education_form.classXIIpassoutYear.selectedIndex==null)
+	{
+		alert("Please Select Passout Year");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXIIMedium.selectedIndex=="" || document.education_form.classXIIMedium.selectedIndex==null)
+	{
+		alert("Please Select Medium");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXIIMarks.value=="" || document.education_form.classXIIMarks.value==null)
+	{
+		alert("Marks can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.englishMarks.value=="" || document.education_form.englishMarks.value==null)
+	{
+		alert("English Marks can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.mathsMarks.value=="" || document.education_form.mathsMarks.value==null)
+	{
+		alert("Maths Marks can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXIICertification_name.value=="" || document.education_form.classXIICertification_name.value==null)
+	{
+		alert("Certification name can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.education_form.classXIICertificationBody.value=="" || document.education_form.classXIICertificationBody.value==null)
+	{
+		alert("certificate body can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+</script>
+</head>
+<body>
+     <h1><a href="applicant_logout.jsp">Logout</a></h1>
+    <form action="education.jsp" method="post" name="education_form" onsubmit="return validateform()">
+      
+        <div class="container">
+  
+	<div  class="form">
+	<form id="contactform"> 
+	<br><br><br><br><font color="white" size=5px;><center>Education</center></font><br>
+		<hr style="border: 1px dashed red;" />
+		<center><font size="4">Graduation Details</font></center><br>
+		
+	<p class="contact"><label for="Basic/Graduation:">Basic/Graduation:</label>
+	<select name="graduation">
+        <option value="-1">Select</option>
+	<option value="B.Tech/B.E.">B.Tech/B.E.</option>
+	<option value="B.A">B.A</option>   
+	<option value="B.Arch">B.Arch</option> 
+	<option value="BCA">BCA</option>
+        <option value="B.Com">B.Com</option>
+        <option value="B.Ed">B.Ed</option> 
+	<option value="B.Sc">B.Sc</option>  
+	<option value="BHMS">BHMS</option>  
+	<option value="LLB">LLB</option> 
+	<option value="MBBS">MBBS</option></select> </p>
+	
+	 
+	
+	<br>
+	<p class="contact"><label for="Specialization:">Specialization:</label>
+	<select name="specialization">
+	<option value="-1">Select</option>
+    <option value="IT">Information Technology</option>
+	<option value="Civil" >Civil</option> 
+	<option value="Computers" >Computers</option>   
+	<option value="Electrical" >Electrical</option>    
+	<option value="Electronics/Telecommunication" >Electronics/Telecommunication</option>
+	<option value="Energy" >Energy</option>   
+        <option value="Instrumentation" >Instrumentation</option> 
+	<option value="Mechanical" >Mechanical</option>      
+        <option value="Mineral" >Mineral</option>        
+        <option value="Nuclear" >Nuclear</option>       
+	<option value="Petroleum" >Petroleum</option>      
+	<option value="Production/Industrial" >Production/Industrial</option>   
+	<option value="Textile" >Textile</option> 
+	<option value="Other Engineering" >Other Engineering</option></select></p>
+
+		<br>
+	<p class="contact"><label for="University/Institute:">University/Institute:</label><br></p>
+	<input id="name" name="university_name" placeholder="University Name"  tabindex="1" type="text">
+	
+	<br>
+	<p class="contact"><label for="Year:">Year:</label>
+	<select name="passoutYear">
+	<option value="-1">Select</option>
+	<option value="2017" >2017</option>
+	<option value="2016" >2016</option>
+	<option value="2015" >2015</option>
+	<option value="2014" >2014</option>
+	<option value="2013" >2013</option>
+	<option value="2012" >2012</option>
+	<option value="2011" >2011</option>
+	<option value="2010" >2010</option>
+	<option value="2009" >2009</option> 
+	<option value="2008" >2008</option> 
+	<option value="2007" >2007</option> 
+	<option value="2006" >2006</option> 
+	<option value="2005" >2005</option> 
+	<option value="2004" >2004</option> 
+	<option value="2003" >2003</option> 
+	<option value="2002" >2002</option> 
+	<option value="2001" >2001</option> 
+	<option value="2000" >2000</option> 
+	<option value="1999" >1999</option> 
+	<option value="1998" >1998</option> 
+	<option value="1997" >1997</option> 
+	<option value="1996" >1996</option> 
+	<option value="1995" >1995</option> 
+	<option value="1994" >1994</option> 
+	<option value="1993" >1993</option> 
+	<option value="1992" >1992</option> 
+	<option value="1991" >1991</option> 
+	<option value="1990" >1990</option></select></p>
+	
+	<br>
+	<p class="contact"><label for="Grading System:">Grading System:</label>
+	<select name="gradingSystem">
+	<option value="-1">Select</option>
+	<option value="Scale 10 Grading System" >Scale 10 Grading System</option> 
+	<option value="Scale 4 Grading System" >Scale 4 Grading System</option> 
+	<option value="% Marks of 100 Maximum" >% Marks of 100 Maximum</option>
+	<option value="Course Requires a Pas" >Course Requires a Pass</option></select></p>      
+	
+	<br>
+	<p  class="contact"><label for="Marks:">Aggregates:</label></p>
+	<input id="name" name="aggregates" placeholder="Aggregates"  tabindex="1" type="number">
+	
+	<br>
+	<p  class="contact"><label for="Certification Name:">Certification Name:</label></p>
+	<input id="name" name="certificate_name" placeholder="Certification Name" tabindex="1" type="text">
+	
+	<br>
+	<p  class="contact"><label for="Certification Body:">Certification Body:</label></p>
+	<input id="name" name="certificate_body" placeholder="Certification Body" tabindex="1" type="text">
+	
+	<br>
+	<p  class="contact"><label for="Year:">Year:</label>
+	<select name="certificationYear">
+	<option value="-1">Select</option>
+	<option value="2017" >2017</option>
+	<option value="2016" >2016</option>
+	<option value="2015" >2015</option>
+	<option value="2014" >2014</option>
+	<option value="2013" >2013</option>
+	<option value="2012" >2012</option>
+	<option value="2011" >2011</option>
+	<option value="2010" >2010</option>
+	<option value="2009" >2009</option> 
+	<option value="2008" >2008</option> 
+	<option value="2007" >2007</option> 
+	<option value="2006" >2006</option> 
+	<option value="2005" >2005</option> 
+	<option value="2004" >2004</option> 
+	<option value="2003" >2003</option> 
+	<option value="2002" >2002</option> 
+	<option value="2001" >2001</option> 
+	<option value="2000" >2000</option> 
+	<option value="1999" >1999</option> 
+	<option value="1998" >1998</option> 
+	<option value="1997" >1997</option> 
+	<option value="1996" >1996</option> 
+	<option value="1995" >1995</option> 
+	<option value="1994" >1994</option> 
+	<option value="1993" >1993</option> 
+	<option value="1992" >1992</option> 
+	<option value="1991" >1991</option> 
+	<option value="1990" >1990</option>
+	</select></p>
+	<br>
+	<!-- Class X -->
+	<hr style="border: 1px dashed red;" />
+	   <center><font size="4">Class X Details</font></center><br>
+	<p class="contact"><label for="schoolBoardId_10:">Class X Board:</label>
+	 <select name="classXBoard">                                     
+	 <option value="-1">Select</option>
+	 <optgroup class="optGrp" label="-----------All India-----------"></optgroup> 
+	 <option value="CBSE">CBSE</option>     
+	 <option value="CISCE(ICSE/ISC)">CISCE(ICSE/ISC)</option>   
+	 <option value="Diploma">Diploma</option>
+	 <option value="National Open School">National Open School</option>  
+	 <optgroup class="optGrp" label="-----------State Boards----- ------"></optgroup>   
+	 <option value="Andhra Pradesh">Andhra Pradesh</option>                      
+	 <option value="Assam">Assam</option>                         
+	 <option value="Bihar">Bihar</option>                         
+	 <option value="Goa">Goa</option>                              
+	 <option value="Gujarat">Gujarat</option>                                   
+	 <option value="Haryana">Haryana</option>                              
+	 <option value="Himachal Pradesh">Himachal Pradesh</option>                    
+	 <option value="Jammu and Kashmir">J &amp; K</option>                           
+	 <option value="Karnataka">Karnataka</option>                           
+	 <option value="Kerala">Kerala</option>                              
+	 <option value="Maharashtra">Maharashtra</option>                                    
+	 <option value="Madhya Pradesh">Madhya Pradesh</option>                                
+	 <option value="Manipur">Manipur</option>                                       
+	 <option value="Meghalaya">Meghalaya</option>                                     
+	 <option value="Mizoram">Mizoram</option>                                      
+	 <option value="Nagaland">Nagaland</option>                                     
+	 <option value="Orissa">Orissa</option>                                    
+	 <option value="Punjab">Punjab</option>                                    
+	 <option value="Rajasthan">Rajasthan</option>
+	 <option value="Tamil Nadu">Tamil Nadu</option>                                  
+        <option value="Tripura">Tripura</option>                                     
+	 <option value="Uttar Pradesh">Uttar Pradesh</option>                                   
+        <option value="West Bengal">West Bengal</option>                                    
+	 <option value="Other">Other</option>   
+	 </select>
+	</p>
+	<br>
+	
+	<p  class="contact"><label for="schoolCompletionYear_10:">Year:</label>
+	<select name="classXpassoutYear">
+	<option value="-1">Select</option>
+	<option value="2016">2016</option>   
+	<option value="2015">2015</option>    
+	<option value="2014">2014</option>    
+	<option value="2013">2013</option>    
+	<option value="2012">2012</option>    
+	<option value="2011">2011</option>    
+	<option value="2010">2010</option>
+	<option value="2008">2008</option>    
+	<option value="2007">2007</option>
+	<option value="2005">2005</option>    
+	<option value="2004">2004</option>    
+	<option value="2003">2003</option>
+	<option value="2001">2001</option>    
+	<option value="2000">2000</option>
+	<option value="1998">1998</option>    
+	<option value="1997">1997</option>    
+	<option value="1996">1996</option>    
+	<option value="1995">1995</option>    
+	<option value="1994">1994</option>    
+	<option value="1993">1993</option>    
+	<option value="1992">1992</option>
+	<option value="1990">1990</option>    
+	<option value="1989">1989</option>    
+	<option value="1988">1988</option>    
+	<option value="1987">1987</option>    
+	<option value="1986">1986</option>    
+	<option value="1985">1985</option>      
+	<option value="1984">1984</option>      
+	<option value="1983">1983</option>      
+	<option value="1982">1982</option>      
+	<option value="1981">1981</option>      
+	<option value="1980">1980</option>      
+	<option value="1979">1979</option>
+	<option value="1977">1977</option>      
+	<option value="1976">1976</option>      
+	<option value="1975">1975</option>      
+	<option value="1974">1974</option>
+	<option value="1972">1972</option>                                     
+	<option value="1971">1971</option>                                     
+	<option value="1970">1970</option>                                     
+	<option value="1969">1969</option>                                     
+	<option value="1968">1968</option>                                     
+	<option value="1967">1967</option>                                     
+	<option value="1966">1966</option>                                     
+	<option value="1965">1965</option>
+	<option value="1963">1963</option>                                       
+	<option value="1962">1962</option>                                       
+	<option value="1961">1961</option>                                       
+	<option value="1960">1960</option>                                       
+	<option value="1959">1959</option>                                       
+	<option value="1958">1958</option>                                       
+	<option value="1957">1957</option>                                       
+	<option value="1956">1956</option>                                       
+	<option value="1955">1955</option>                                       
+	<option value="1954">1954</option>
+	<option value="1952">1952</option>                                       
+	<option value="1951">1951</option>                                       
+	<option value="1950">1950</option>                                       
+	<option value="1949">1949</option>
+	<option value="1947">1947</option>                                       
+	<option value="1946">1946</option>                                       
+	<option value="1945">1945</option>                                       
+	<option value="1944">1944</option>                                       
+	<option value="1943">1943</option>                                       
+	<option value="1942">1942</option>                                       
+	<option value="1941">1941</option>                                       
+	<option value="1940">1940</option>  
+	</select>
+	</p>
+	<br>
+	
+	<p class="contact"> <label for="schoolMediumId_10:">Medium:</label>
+	 <select name="classXmedium">
+	 <option value="-1">Select</option>  
+	 <option value="Assamese/Asomiya ">Assamese/Asomiya </option> 
+	 <option value="Bengali/Bangla">Bengali/Bangla</option>
+	 <option value="English">English</option>  
+	 <option value="Gujarati">Gujarati</option>  
+	 <option value="Hindi">Hindi</option>   
+	 <option value="Kannada">Kannada</option> 
+	 <option value="Kashmiri">Kashmiri</option> 
+	 <option value="Konkani">Konkani</option>  
+	 <option value="Malayalam">Malayalam</option>  
+	 <option value="Manipuri">Manipuri</option>  
+	 <option value="Marathi">Marathi</option>   
+	 <option value="Oriya">Oriya</option>     
+	 <option value="Punjabi">Punjabi</option>   
+	 <option value="Sanskrit">Sanskrit</option>  
+	 <option value="Tamil">Tamil</option>
+	 <option value="Telagu">Telugu</option>  
+	 <option value="Urdu">Urdu</option>                                       
+	 <option value="Other">Other</option>
+	 </select>
+	</p> <br>
+	
+	<p class="contact"><label for="schoolPercentageId_10">Marks: </label></p>
+	<input id="name" name="classXMarks" placeholder="Marks"  tabindex="1" type="number">
+	<br>
+	
+	<p class="contact"><label for="Certification Name:">Certification Name:</label></p>
+	<input id="name" name="classXCertification_name" placeholder="Certification Name" tabindex="1" type="text">
+	
+	<br>
+	<p  class="contact"><label for="Certification Body:">Certification Body:</label></p>
+	<input id="name" name="classXCertificationBody" placeholder="Certification Body"  tabindex="1" type="text">
+	<br>
+	<hr style="border: 1px dashed red;" />
+	<!--class XII -->
+	
+		<center><font size="4">Class XII Details</font></center><br>
+	<p class="contact"><label for="schoolBoardId_12:">Class XII Board:</label>
+	<select name="classXIIBoard">
+	<option value="-1">Select</option>
+	 <optgroup class="optGrp" label="-----------All India-----------"></optgroup> 
+	 <option value="CBSE">CBSE</option>     
+	 <option value="CISCE(ICSE/ISC)">CISCE(ICSE/ISC)</option>   
+	 <option value="Diploma">Diploma</option>
+	 <option value="National Open School">National Open School</option>  
+	 <optgroup class="optGrp" label="-----------State Boards----- ------"></optgroup>   
+	 <option value="Andhra Pradesh">Andhra Pradesh</option>                      
+	 <option value="Assam">Assam</option>                         
+	 <option value="Bihar">Bihar</option>                         
+	 <option value="Goa">Goa</option>                              
+	 <option value="Gujarat">Gujarat</option>                                   
+	 <option value="Haryana">Haryana</option>                              
+	 <option value="Himachal Pradesh">Himachal Pradesh</option>                    
+	 <option value="Jammu and Kashmir">J &amp; K</option>                           
+	 <option value="Karnataka">Karnataka</option>                           
+	 <option value="Kerala">Kerala</option>                              
+	 <option value="Maharashtra">Maharashtra</option>                                    
+	 <option value="Madhya Pradesh">Madhya Pradesh</option>                                
+	 <option value="Manipur">Manipur</option>                                       
+	 <option value="Meghalaya">Meghalaya</option>                                     
+	 <option value="Mizoram">Mizoram</option>                                      
+	 <option value="Nagaland">Nagaland</option>                                     
+	 <option value="Orissa">Orissa</option>                                    
+	 <option value="Punjab">Punjab</option>                                    
+	 <option value="Rajasthan">Rajasthan</option>
+	 <option value="Tamil Nadu">Tamil Nadu</option>                                  
+         <option value="Tripura">Tripura</option>                                     
+	 <option value="Uttar Pradesh">Uttar Pradesh</option>                                   
+         <option value="West Bengal">West Bengal</option>                                    
+	 <option value="Other">Other</option>  
+	 </select>
+	 </p><br>
+	
+	<p class="contact"><label for="schoolCompletionYear_12">Year:</label>
+	<select name="classXIIpassoutYear">
+	<option value="-1">Select</option>
+	<option value="2016">2016</option>       
+	<option value="2015">2015</option>      
+	<option value="2014">2014</option>       
+	<option value="2013">2013</option>         
+	<option value="2012">2012</option>                                      
+	<option value="2011">2011</option>                                   
+    <option value="2010">2010</option>                                      
+	<option value="2009">2009</option>                                      
+	<option value="2008">2008</option>                                      
+	<option value="2007">2007</option>                                     
+	<option value="2006">2006</option>                                      
+	<option value="2005">2005</option>                                      
+	<option value="2004">2004</option>                                    
+	<option value="2003">2003</option>                                    
+	<option value="2002">2002</option>                                    
+	<option value="2001">2001</option>                                    
+	<option value="2000">2000</option>
+	<option value="1998">1998</option>                                    
+	<option value="1997">1997</option>                                    
+	<option value="1996">1996</option>                                    
+	<option value="1995">1995</option>                                    
+	<option value="1994">1994</option>                                    
+	<option value="1993">1993</option>                                    
+	<option value="1992">1992</option>                                    
+	<option value="1991">1991</option>                                    
+	<option value="1990">1990</option>                                    
+	<option value="1989">1989</option>
+	<option value="1987">1987</option>                                    
+	<option value="1986">1986</option>                                    
+	<option value="1985">1985</option>                                    
+	<option value="1984">1984</option>                                    
+	<option value="1983">1983</option>                                    
+	<option value="1982">1982</option>                                    
+	<option value="1981">1981</option>
+	<option value="1979">1979</option>                                    
+	<option value="1978">1978</option>
+	<option value="1976">1976</option>                                    
+	<option value="1975">1975</option>                                    
+	<option value="1974">1974</option>                                    
+	<option value="1973">1973</option>
+	<option value="1971">1971</option>                                    
+	<option value="1970">1970</option>                                    
+	<option value="1969">1969</option>                                    
+	<option value="1968">1968</option>
+	<option value="1966">1966</option>
+	<option value="1964">1964</option>                                    
+	<option value="1963">1963</option>                                    
+	<option value="1962">1962</option>                                    
+	<option value="1961">1961</option>
+	<option value="1959">1959</option>
+	<option value="1957">1957</option>                                    
+	<option value="1956">1956</option>                                      
+	<option value="1955">1955</option>                                      
+	<option value="1954">1954</option>                                      
+	<option value="1953">1953</option>                                      
+	<option value="1952">1952</option>
+	<option value="1950">1950</option>                                       
+	<option value="1949">1949</option>
+	<option value="1948">1948</option>                                       
+	<option value="1947">1947</option>
+	<option value="1946">1946</option>                                       
+	<option value="1945">1945</option>
+	<option value="1944">1944</option>                                       
+	<option value="1943">1943</option>                                       
+	<option value="1942">1942</option>                                       
+	<option value="1941">1941</option>
+	<option value="1940">1940</option>  
+	</select>
+	</p><br>
+	
+	<p class="contact"><label for="schoolMediumId_12">Medium:</label>
+	<select name="classXIIMedium">
+	 <option value="-1">Select</option>  
+	 <option value="Assamese/Asomiya ">Assamese/Asomiya </option> 
+	 <option value="Bengali/Bangla">Bengali/Bangla</option>
+	 <option value="English">English</option>  
+	 <option value="Gujarati">Gujarati</option>  
+	 <option value="Hindi">Hindi</option>   
+	 <option value="Kannada">Kannada</option> 
+	 <option value="Kashmiri">Kashmiri</option> 
+	 <option value="Konkani">Konkani</option>  
+	 <option value="Malayalam">Malayalam</option>  
+	 <option value="Manipuri">Manipuri</option>  
+	 <option value="Marathi">Marathi</option>   
+	 <option value="Oriya">Oriya</option>     
+	 <option value="Punjabi">Punjabi</option>   
+	 <option value="Sanskrit">Sanskrit</option>  
+	 <option value="Tamil">Tamil</option>
+	 <option value="Telagu">Telugu</option>  
+	 <option value="Urdu">Urdu</option>                                       
+	 <option value="Other">Other</option>  
+	</select>
+	</p><br>
+	
+	<p class="contact"><label for="schoolPercentageId_12">Marks:</label></p>
+        <input id="name" name="classXIIMarks" placeholder="Marks"  tabindex="1" type="number">
+        <br>
+	
+	<p class="contact"><label for="name">English Marks:</label></p>
+	<input id="name" name="englishMarks" placeholder="English Marks"  tabindex="1" type="number">
+	<br>
+	
+	<p class="contact"><label for="name">Maths Marks:</label></p>
+    <input id="name" name="mathsMarks" placeholder="Maths Marks"  tabindex="1" type="number">
+    <br>
+	
+	<p  class="contact"><label for="Certification Name:">Certification Name:</label></p>
+	<input id="name" name="classXIICertification_name" placeholder="Certification Name"  tabindex="1" type="text">
+	
+	<br>
+	<p  class="contact"><label for="Certification Body:">Certification Body:</label></p>
+	<input id="name" name="classXIICertificationBody" placeholder="Certification Body"  tabindex="1" type="text">
+	<br>
+	
+	
+	<!-- <input class="buttom" name="submit" id="submit" tabindex="5" value="Save" type="submit"> -->
+	
+	</form>
+                <input class="buttom" name="submit" id="submit" tabindex="5" value="Save" type="submit">
+        </div> 
+            
+    </form>
+</body>
+</html>

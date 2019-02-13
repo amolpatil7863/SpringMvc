@@ -19,5 +19,13 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public List<Employee> getEmployees() {
 		return list;
 	}
-
+	
+	public Employee getEmployee(int id) {
+		for (Employee employee : list) {
+			if(employee.getId()==id) {
+				return employee;
+			}
+		}
+		return null;
+	}
 }

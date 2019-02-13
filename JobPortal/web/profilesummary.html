@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Profile Summary</title>
+	 
+    <link rel="stylesheet" type="text/css" href="css/Resume/style1.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/Resume/demo.css" media="all" />
+	
+<script type="text/javascript">
+function validateform()
+{
+	var p=document.profileSummary_form.profileSummary.value;
+	//alert(p);
+	//return false;
+	if(p!="" || p!=null)
+	{
+		alert(hi);
+		//return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+</script>
+      <style>
+        h1 {color:red;text-align:right;}
+    </style>
+
+</head>
+<body>
+    <h1><a href="applicant_logout.jsp">Logout</a></h1> 
+  <form action="summary.jsp" method="post" name="profileSummary_form" onsubmit="return validateform()">
+    <div class="container">
+  
+	<div  class="form">
+	<form id="contactform"> 
+	<br><br><br><br><font color="white" size=5px;><center>Profile Summary</center></font><br>
+	Your Profile Summary should mention the highlights of your career and education, what your 
+	professional interests are, and what kind of a career you are looking for.
+    
+	<br><br><br><p class="contact"><label for="profilesummary">Profile Summary</label></p>
+    
+        <textarea name="profileSummary" rows="3" cols="90"> </textarea>
+        <br><br><br>
+	<input class="buttom" name="submit" id="submit" tabindex="5" value="Save" type="submit">
+	
+  
+	 
+</form>
+</div>
+ </form>
+</body>
+</html>
+
+     

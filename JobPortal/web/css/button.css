@@ -1,0 +1,18 @@
+.button
+{ 
+	
+	color: #ffffff;
+    width:100px;
+    height: 50px;
+    line-height:20px;
+    padding-bottom: 8px;
+    vertical-align: middle;
+    font-size: 13px;
+	 margin: 0 auto;
+    text-transform: none;
+    border:2px solid transparent;
+}
+.button:hover
+{
+    background-color: #2980B9;
+}

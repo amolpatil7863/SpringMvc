@@ -34,11 +34,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 		try{
 		/*ResponseEntity<List<Employee>> response = restTemplate.exchange("http://localhost:8080/FirstRestTemplate/getemp",
 				  HttpMethod.GET,
-				  null,
+				  null,q
 				  new ParameterizedTypeReference<List<Employee>>(){});*/
 			ArrayList<Employee> empdata=restTemplate.getForObject("http://localhost:8080/FirstRestTemplate/getemp", (Class<? extends ArrayList<Employee>>)ArrayList.class);
 		System.out.println("EmpData:-"+empdata.size());
-		}catch(HttpMessageNotReadableException e){
+           		}catch(HttpMessageNotReadableException e){
 			throw new RuntimeException(e.getMessage());
 		}
 		catch (RestClientException e) {

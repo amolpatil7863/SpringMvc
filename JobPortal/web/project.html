@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Details</title>
+	 
+    <link rel="stylesheet" type="text/css" href="css/Resume/style1.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/Resume/demo.css" media="all" />
+    <style>
+        h1 {color:red;text-align:right;}
+    </style>
+<script type="text/javascript">
+function validateform()
+{
+	//var pr=document.project_form.projecttitle.value;
+	if(document.project_form.projecttitle.value=="" || document.project_form.projecttitle.value==null)
+	{
+		alert("Project name can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.project_form.startMonth.selectedIndex=="" || document.project_form.startMonth.selectedIndex==null)
+	{
+		alert("Please select Project Duration");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.project_form.startYear.selectedIndex=="" || document.project_form.startYear.selectedIndex==null)
+	{
+		alert("Please select Project Duration");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.project_form.endMonth.selectedIndex=="" || document.project_form.endMonth.selectedIndex==null)
+	{
+		alert("Please select Project Duration");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.project_form.endYear.selectedIndex=="" || document.project_form.endYear.selectedIndex==null)
+	{
+		alert("Please select Project Duration");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.project_form.projectlocation.value=="" || document.project_form.projectlocation.value==null)
+	{
+		alert("Location name can't be empty");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.project_form.employmentNature.value=="" || document.project_form.employmentNature.value==null)
+	{
+		alert("Please select Employment type");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.project_form.role.selectedIndex=="" || document.project_form.role.selectedIndex==null)
+	{
+		alert("Please select Role");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	if(document.project_form.teamSize.selectedIndex=="" || document.project_form.teamSize.selectedIndex==null)
+	{
+		alert("Please select Team Size");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+	/*var pd=document.project_form.projectDetails.value;
+	//alert(pd);
+	if(pd=="")
+	{
+	alert(pd);
+		//alert("Project Details can't be empty");
+		//return false;
+	}
+	if(document.project_form.roleDescription.value=="" || document.project_form.roleDescription.value==null)
+	{
+		alert("Pro Role can't be empty");
+		return false;
+	}*/
+}
+</script>
+</head>
+<body>
+     <h1><a href="applicant_logout.jsp">Logout</a></h1>
+    <form action="ProjectDetail.jsp" method="post" name="project_form" onsubmit="return validateform()">
+    <div class="container">
+  
+	<div  class="form">
+	<form id="contactform"> 
+	<br><br><br><br><font color="white" size=5px;><center>Project</center></font><br>
+		
+	<p class="contact"><label for="project:">Project Title:</label></p>
+	<input id="project" name="projecttitle" placeholder="Project Title" tabindex="1" type="text">
+	
+	<p class="contact"><label for="duration:">Duration:</label>
+	<select name="startMonth">
+     <option value="-1">Month</option> 
+	<option value="Jan">Jan</option> 
+	<option value="Feb">Feb</option> 
+	<option value="Mar">Mar</option> 
+	<option value="April">Apr</option> 
+	<option value="May">May</option> 
+	<option value="Jun">Jun</option>  
+	<option value="Jully">Jul</option> 
+	<option value="August">Aug</option>  
+	<option value="sep">Sep</option> 
+	<option value="oct">Oct</option>
+	<option value="Nov">Nov</option>
+	<option value="Dec">Dec</option>  
+	</select>
+	
+	 <select name="startYear">
+         <option value="-1">Year</option> 
+	 <option value="2017">2017</option> 
+	 <option value="2016">2016</option> 
+	 <option value="2015">2015</option> 
+	 <option value="2014">2014</option> 
+	 <option value="2013">2013</option> 
+	 <option value="2012">2012</option> 
+	 <option value="2011">2011</option> 
+	 <option value="2010">2010</option> 
+	 <option value="2009">2009</option> 
+	 <option value="2008">2008</option> 
+	 <option value="2007">2007</option> 
+	 <option value="2006">2006</option> 
+	 <option value="2005">2005</option> 
+	 <option value="2004">2004</option> 
+	 <option value="2003">2003</option> 
+	 <option value="2002">2002</option> 
+	 <option value="2001">2001</option> 
+	 <option value="2000">2000</option> 
+	 <option value="1999">1999</option> 
+	 <option value="1998">1998</option> 
+	 <option value="1997">1997</option> 
+	 <option value="1996">1996</option> 
+	 <option value="1995">1995</option> 
+	 <option value="1994">1994</option> 
+	 <option value="1993">1993</option> 
+	 <option value="1992">1992</option> 
+	 <option value="1991">1991</option> 
+	 <option value="1990">1990</option>  
+	 <option value="1989">1989</option>  
+	 <option value="1988">1988</option>  
+	 <option value="1987">1987</option>  
+	 <option value="1986">1986</option>  
+	 <option value="1985">1985</option>  
+	 <option value="1984">1984</option>  
+	 <option value="1983">1983</option> 
+	 <option value="1982">1982</option>  
+	 <option value="1981">1981</option>  
+	 <option value="1980">1980</option> 
+	 <option value="1979">1979</option>  
+	 <option value="1978">1978</option>  
+	 <option value="1977">1977</option> 
+	 <option value="1976">1976</option>  
+	 <option value="1975">1975</option>  
+	 <option value="1974">1974</option> 
+	 <option value="1973">1973</option>  
+	 <option value="1972">1972</option>  
+	 <option value="1971">1971</option> 
+	 <option value="1970">1970</option>  
+	 </select>
+	 
+	  <label>To</label>
+	  <select name="endMonth"> 
+            <option value="-1">Month</option> 
+            <option value="Jan">Jan</option> 
+            <option value="Feb">Feb</option> 
+            <option value="Mar">Mar</option> 
+            <option value="April">Apr</option> 
+            <option value="May">May</option> 
+            <option value="Jun">Jun</option>  
+            <option value="Jully">Jul</option> 
+            <option value="August">Aug</option>  
+            <option value="sep">Sep</option> 
+            <option value="oct">Oct</option>
+            <option value="Nov">Nov</option>
+            <option value="Dec">Dec</option>  
+	  </select>
+	 
+          <select name="endYear">
+         <option value="-1">Year</option> 
+	 <option value="2017">2017</option> 
+	 <option value="2016">2016</option> 
+	 <option value="2015">2015</option> 
+	 <option value="2014">2014</option> 
+	 <option value="2013">2013</option> 
+	 <option value="2012">2012</option> 
+	 <option value="2011">2011</option> 
+	 <option value="2010">2010</option> 
+	 <option value="2009">2009</option> 
+	 <option value="2008">2008</option> 
+	 <option value="2007">2007</option> 
+	 <option value="2006">2006</option> 
+	 <option value="2005">2005</option> 
+	 <option value="2004">2004</option> 
+	 <option value="2003">2003</option> 
+	 <option value="2002">2002</option> 
+	 <option value="2001">2001</option> 
+	 <option value="2000">2000</option> 
+	 <option value="1999">1999</option> 
+	 <option value="1998">1998</option> 
+	 <option value="1997">1997</option> 
+	 <option value="1996">1996</option> 
+	 <option value="1995">1995</option> 
+	 <option value="1994">1994</option> 
+	 <option value="1993">1993</option> 
+	 <option value="1992">1992</option> 
+	 <option value="1991">1991</option> 
+	 <option value="1990">1990</option>  
+	 <option value="1989">1989</option>  
+	 <option value="1988">1988</option>  
+	 <option value="1987">1987</option>  
+	 <option value="1986">1986</option>  
+	 <option value="1985">1985</option>  
+	 <option value="1984">1984</option>  
+	 <option value="1983">1983</option> 
+	 <option value="1982">1982</option>  
+	 <option value="1981">1981</option>  
+	 <option value="1980">1980</option> 
+	 <option value="1979">1979</option>  
+	 <option value="1978">1978</option>  
+	 <option value="1977">1977</option> 
+	 <option value="1976">1976</option>  
+	 <option value="1975">1975</option>  
+	 <option value="1974">1974</option> 
+	 <option value="1973">1973</option>  
+	 <option value="1972">1972</option>  
+	 <option value="1971">1971</option> 
+	 <option value="1970">1970</option>  
+	 </select>
+	</p><br>
+	
+	<p class="contact"><label for="ProjectLocation">Project Location:</label></p>
+	<input id="projectLocation" name="projectlocation" placeholder="Project Location" tabindex="1" type="text">
+	<p class="contact">
+	<label for="onsite">Onsite</label><input type="radio" name="locationType" value="onsite">
+	<label for="offsite">Offsite</label><input type="radio" name="locationType" value="offsite">
+	</p>
+	<br>
+	
+	<p class="contact"><label for="summary">Employment Type:</label>
+	<input type="radio" name="employmentNature" id="fTime" value="Full Time">
+	<label for="fTime">Full Time</label>
+	<input type="radio" name="employmentNature" id="pTime" value="Part Time">
+	<label for="fTime">Part Time</label>
+	<input type="radio" name="employmentNature" id="cProj" value="Contractual"> 
+	<label for="fTime">Contractual Project</label>
+	</p>
+	
+	<p class="contact"><label for="proDetails">Project Details:</label>
+	<textarea name="projectDetails" rows="3" cols="90"> </textarea> </p><br>
+	
+	<p class="contact"><label for="role">Role:</label>
+	<select name="role">
+        <option value="-1">Select</option>
+        <option value="Domain Expert">Domain Expert</option>
+        <option value="Sr.Project Leader">Sr.Project Leader</option>  
+        <option value="Solution Architect">Solution Architect</option>  
+        <option value="Quality Analyst">Quality Analyst</option>
+        <option value="Database Architect/DBA">Database Architect/DBA</option> 
+        <option value="Network/System Administrator">Network/System Administrator</option>  
+        <option value="Project Leader">Project Leader</option> 
+        <option value="Module Leader">Module Leader</option>  
+        <option value="Sr.Programmer">Sr.Programmer</option> 
+        <option value="Programmer">Programmer</option> 
+        <option value="Test Engineer">Test Engineer</option> 
+        <option value="other">Other</option> 
+        </select>
+        </p>
+        <br>
+	
+	<p class="contact"><label for="roleDescription">Role Description:</label>
+	<textarea name="roleDescription" rows="3" cols="90"> </textarea></p><br>
+	
+	<p class="contact"><label for="TeamSize">Team Size:</label>
+	<select name="teamSize">
+        <option value="-1">Select</option>
+        <option value="1">1</option>  
+        <option value="2">2</option>  
+        <option value="3">3</option>  
+        <option value="4">4</option>  
+        <option value="5">5</option>  
+        <option value="6">6</option>
+        <option value="8">8</option>  
+        <option value="9">9</option>  
+        <option value="10">10</option> 
+        <option value="11">11</option>
+        <option value="13">13</option> 
+        <option value="14">14</option> 
+        <option value="15">15</option> 
+        <option value="16">16</option> 
+        <option value="17">17</option>
+        <option value="19">19</option>
+        <option value="21">21</option>  
+        <option value="22">22</option>  
+        <option value="23">23</option>  
+        <option value="24">24</option>  
+        <option value="25">25</option>  
+        <option value="26">26</option>  
+        <option value="27">27</option>  
+        <option value="28">28</option>  
+        <option value="29">29</option>  
+        <option value="30">30</option>  
+        </select>
+	</p><br>
+	
+    <input class="buttom" name="submit" id="submit" tabindex="5" value="Save" type="submit">
+	
+	</div>
+        
+    </form>
+</body>
+</html>

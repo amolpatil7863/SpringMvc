@@ -2,14 +2,14 @@ package com.spring.mvc.restcontroller;
 
 import java.util.List;
 import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.spring.mvc.model.Employee;
 import com.spring.mvc.service.EmployeeService;
 
@@ -35,8 +35,8 @@ public class EmployeeController {
 		return employeeService.getEmployees();
 	}
 
-	/*@RequestMapping(value = "/getemployee/{id}", method = RequestMethod.GET)
+	@RequestMapping(value = "/getemployee/{id}", method = RequestMethod.GET)
 	public @ResponseBody Employee getEmployee(@PathVariable String id) {
 	     return	employeeService.getEmployee(Integer.parseInt(id));
-	}*/
+	}
 }

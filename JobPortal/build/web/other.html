@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Project Details</title>
+	 
+ 
+  <link rel="stylesheet" type="text/css" href="css/Resume/demo1.css" media="all" />
+</head>
+<body>
+<div class="container">
+	<div  class="form">
+	<form id="contactform"> 
+			<br><br><br><br><font color="white" size=5px;><center>More Details</center></font><br>
+
+	<p class="contact">
+	<center><table cellspacing="0" cellpadding="5" border="0" width="450"></center>
+                   
+                   <tbody>
+                     <tr class="grytxt8">
+                       <td width="128" nowrap=""><strong>Language</strong></td>
+                       <td width="112" nowrap="">
+                         <strong>Proficiency Level</strong></td>
+                       <td width="39" nowrap=""><strong>Read</strong></td>
+                       <td width="34" nowrap=""><strong>Write</strong></td>
+                       <td width="37" nowrap=""><strong>Speak</strong></td>
+                       <td width="100"></td>
+                     </tr>
+    <input type="hidden" name="maxlangcount" id="maxlangcount" value="5">
+ 
+    <input type="hidden" name="currlangcount" id="currlangcount" value="5"> 
+
+                     <tr style="display:" id="lang1">
+                       <td nowrap="" class="valignTop"><input type="hidden" value="" name="languageId[0]">
+                         <input type="text" maxlength="10" size="18" value="" name="lang[0]" valtype="lang0"><br>
+                       <i id="lang0-error"></i>
+</td>
+                       <td nowrap="" class="valignTop">
+                        <select class="textbox2" name="proficiencyId[0]">
+            <option value="-1">Select</option>  <option value="1">Beginner</option>  <option value="2">Proficient</option>  <option value="3">Expert</option>                         </select></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="R" class="chkRadio" name="canRead[0]"></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="W" class="chkRadio" name="canWrite[0]"></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="S" class="chkRadio" name="canSpeak[0]"></td>
+                       <td nowrap="" class="valignTop"></td>
+                       
+                     </tr>
+
+                     <tr style="display:" id="lang2">
+                       <td nowrap="" class="valignTop"><input type="hidden" value="" name="languageId[1]">
+                         <input type="text" maxlength="10" size="18" value="" name="lang[1]" valtype="lang1"><br>
+                       <i id="lang1-error"></i>
+</td>
+                       <td nowrap="" class="valignTop">
+                        <select class="textbox2" name="proficiencyId[1]">
+            <option value="-1">Select</option>  <option value="1">Beginner</option>  <option value="2">Proficient</option>  <option value="3">Expert</option>                         </select></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="R" class="chkRadio" name="canRead[1]"></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="W" class="chkRadio" name="canWrite[1]"></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="S" class="chkRadio" name="canSpeak[1]"></td>
+                       <td nowrap="" class="valignTop"></td>
+                       
+                     </tr>
+
+                     <tr style="display:" id="lang3">
+                       <td nowrap="" class="valignTop"><input type="hidden" value="" name="languageId[2]">
+                         <input type="text" maxlength="10" size="18" value="" name="lang[2]" valtype="lang2"><br>
+                       <i id="lang2-error"></i>
+</td>
+                       <td nowrap="" class="valignTop">
+                        <select class="textbox2" name="proficiencyId[2]">
+            <option value="-1">Select</option>  <option value="1">Beginner</option>  <option value="2">Proficient</option>  <option value="3">Expert</option>                         </select></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="R" class="chkRadio" name="canRead[2]"></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="W" class="chkRadio" name="canWrite[2]"></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="S" class="chkRadio" name="canSpeak[2]"></td>
+                       <td nowrap="" class="valignTop"></td>
+                       
+                     </tr>
+
+                     <tr style="visibility: visible;" id="lang4">
+                       <td nowrap="" class="valignTop"><input type="hidden" value="" name="languageId[3]">
+                         <input type="text" maxlength="10" size="18" value="" name="lang[3]" valtype="lang3"><br>
+                       <i id="lang3-error"></i>
+</td>
+                       <td nowrap="" class="valignTop">
+                        <select class="textbox2" name="proficiencyId[3]">
+            <option value="-1">Select</option>  <option value="1">Beginner</option>  <option value="2">Proficient</option>  <option value="3">Expert</option>                         </select></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="R" class="chkRadio" name="canRead[3]"></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="W" class="chkRadio" name="canWrite[3]"></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="S" class="chkRadio" name="canSpeak[3]"></td>
+                       <td nowrap="" class="valignTop"></td>
+                       
+                     </tr>
+
+                     <tr style="visibility: visible;" id="lang5">
+                       <td nowrap="" class="valignTop"><input type="hidden" value="" name="languageId[4]">
+                         <input type="text" maxlength="10" size="18" value="" name="lang[4]" valtype="lang4"><br>
+                       <i id="lang4-error"></i>
+</td>
+                       <td nowrap="" class="valignTop">
+                        <select class="textbox2" name="proficiencyId[4]">
+            <option value="-1">Select</option>  <option value="1">Beginner</option>  <option value="2">Proficient</option>  <option value="3">Expert</option>                         </select></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="R" class="chkRadio" name="canRead[4]"></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="W" class="chkRadio" name="canWrite[4]"></td>
+                       <td nowrap="" class="valignTop"><input type="checkbox" value="S" class="chkRadio" name="canSpeak[4]"></td>
+                       <td nowrap="" class="valignTop"></td>
+                       
+                     </tr>
+                   </tbody>
+                   </table></p>
+				 <br><br>
+				  <input class="buttom" name="submit" id="submit" tabindex="5" value="Save" type="submit">
+				   
+</form>
+</div>
+</body>
+</html>

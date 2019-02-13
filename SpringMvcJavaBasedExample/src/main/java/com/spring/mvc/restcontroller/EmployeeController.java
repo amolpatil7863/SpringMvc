@@ -37,6 +37,7 @@ public class EmployeeController {
 
 	@RequestMapping(value = "/getemployee/{id}", method = RequestMethod.GET)
 	public @ResponseBody Employee getEmployee(@PathVariable String id) {
+		
 	     return	employeeService.getEmployee(Integer.parseInt(id));
 	}
 }

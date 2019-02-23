@@ -7,6 +7,10 @@
 <title>Welcome Page</title>
 </head>
 <body> 
+<<<<<<< HEAD
 Modified On Serverxcvcvxcvvcxcvxvcxcvxcv f
+=======
+Modified On Server
+>>>>>>> 3852832d217526ab5a7512e9b290aa9fe7dce1cf
 </body>
 </html>

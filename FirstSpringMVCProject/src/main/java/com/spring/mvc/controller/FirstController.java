@@ -12,7 +12,7 @@ public class FirstController {
 
 	@RequestMapping(value="/login" ,method=RequestMethod.POST)
 	public String sayWelcome(@ModelAttribute UserData login){
-		System.out.println(login);
+		System.out.println("login::::::"+login);
 		return "welcome";
 	}
 	

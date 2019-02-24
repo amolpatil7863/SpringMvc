@@ -1,16 +1,12 @@
 <html>
 <body>
-<form action="login" modelAttribute="login" method="post" >
-<label>UserName</label>
-<input type="text" name="username">
-<label>Password</label>
-<input type="password" name="password">
-
- Tanaji
-
- svjhjhbjdj  svdhn cvsdysdyyys
-
-<input type="submit" value="Login">
-</form>
+	<form action="add-emp" method="post">
+		<label>Name</label> 
+		<input type="text" name="name"> 
+		<label>Country</label>
+		<input type="text" name="country"> 
+		<input type="submit"
+			value="Submit">
+	</form>
 </body>
 </html>

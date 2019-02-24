@@ -1,7 +1,9 @@
 package com.spring.mvc.bean.dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import org.hibernate.SQLQuery;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -18,6 +20,7 @@ public class PersonDAOImpl implements PersonDAO {
 
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
+		
 	}
 
 	public void save(Person p) {
@@ -31,7 +34,19 @@ public class PersonDAOImpl implements PersonDAO {
 	@SuppressWarnings("unchecked")
 	public List<Person> list() {
 		Session session = this.sessionFactory.openSession();
-		List<Person> personList = session.createQuery("from Person").list();
+		SQLQuery sqlQuery=session.createSQLQuery("SELECT * FROM Person");
+		List<Object[]> rows=sqlQuery.list();
+		List<Person> personList=new ArrayList<Person>();
+		for (Object[] objects : rows) {
+			Person person=new Person();
+			person.setId((Integer) objects[0]);
+			person.setCountry(objects[1].toString());
+			person.setName(objects[2].toString());
+			
+			personList.add(person);
+		}
+		
+//		List<Person> list=sqlQuery.list();
 		session.close();
 		return personList;
 	}

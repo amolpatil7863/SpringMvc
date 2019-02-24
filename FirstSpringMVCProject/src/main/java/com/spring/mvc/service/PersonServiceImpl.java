@@ -18,7 +18,6 @@ public class PersonServiceImpl implements PersonService {
 	public void save(PersonDto personDto) {
 		Person person = new Person();
 		BeanUtils.copyProperties(personDto, person);
-		System.out.println("Entityt:::"+person);
 		personDao.save(person);
 	}
 

@@ -19,6 +19,10 @@ public class PersonServiceImpl implements PersonService {
 		Person person = new Person();
 		BeanUtils.copyProperties(personDto, person);
 		personDao.save(person);
+		List<Person> persons=list();
+		for (Person person1 : persons) {
+			System.out.println("Data From DataBase :::"+person1);
+		}
 	}
 
 	public List<Person> list() {

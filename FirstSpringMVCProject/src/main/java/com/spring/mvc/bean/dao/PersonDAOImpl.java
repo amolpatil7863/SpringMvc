@@ -35,6 +35,7 @@ public class PersonDAOImpl implements PersonDAO {
 	public List<Person> list() {
 		Session session = this.sessionFactory.openSession();
 		SQLQuery sqlQuery=session.createSQLQuery("SELECT * FROM Person");
+		System.out.println("QUERY::::"+sqlQuery.list());
 		List<Object[]> rows=sqlQuery.list();
 		List<Person> personList=new ArrayList<Person>();
 		for (Object[] objects : rows) {
@@ -42,7 +43,6 @@ public class PersonDAOImpl implements PersonDAO {
 			person.setId((Integer) objects[0]);
 			person.setCountry(objects[1].toString());
 			person.setName(objects[2].toString());
-			
 			personList.add(person);
 		}
 		

@@ -96,5 +96,19 @@
 	</dependencies>
 	<build>
 		<finalName>FirstSpringMVCProject</finalName>
+		<plugins>
+
+			<!-- Config: Maven Tomcat Plugin -->
+			<!-- http://mvnrepository.com/artifact/org.apache.tomcat.maven/tomcat7-maven-plugin -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<version>2.2</version>
+				<configuration>
+					<path>/FirstSpringMVCProject</path>
+					<port>8080</port>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>

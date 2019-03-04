@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
 import com.spring.mvc.bean.dao.PersonDAO;
 import com.spring.mvc.dto.PersonDto;
 import com.spring.mvc.model.Person;
@@ -19,9 +20,9 @@ public class PersonServiceImpl implements PersonService {
 		Person person = new Person();
 		BeanUtils.copyProperties(personDto, person);
 		personDao.save(person);
-		List<Person> persons=list();
+		List<Person> persons = list();
 		for (Person person1 : persons) {
-			System.out.println("Data From DataBase :::"+person1);
+			System.out.println("Data From DataBase :::" + person1);
 		}
 	}
 

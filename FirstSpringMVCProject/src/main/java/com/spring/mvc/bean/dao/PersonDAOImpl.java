@@ -35,6 +35,7 @@ public class PersonDAOImpl implements PersonDAO {
 	public List<Person> list() {
 		Session session = this.sessionFactory.openSession();
 		SQLQuery sqlQuery=session.createSQLQuery("SELECT * FROM Person");
+		System.out.println("Sql Query::::"+sqlQuery.toString());
 		System.out.println("QUERY::::"+sqlQuery.list());
 		List<Object[]> rows=sqlQuery.list();
 		List<Person> personList=new ArrayList<Person>();

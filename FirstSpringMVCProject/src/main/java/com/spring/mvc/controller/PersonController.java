@@ -25,7 +25,7 @@ public class PersonController {
 
 	@RequestMapping(value = "/add-emp", method = RequestMethod.POST)
 	public ModelAndView addEmployee(@ModelAttribute PersonDto personDto, ModelAndView modelAndView) {
-		System.out.println("person data:::" + personDto);
+//		System.out.println("person data:::" + personDto);
 		modelAndView.setViewName("view-emp");
 		personService.save(personDto);
 		

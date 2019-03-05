@@ -30,7 +30,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
 		System.out.println("Login authentication:::::");
-		http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/index").loginProcessingUrl("/login")
+		http.authorizeRequests().anyRequest().authenticated().and().formLogin().loginPage("/login").loginProcessingUrl("/authenticateUser").permitAll();
 		http.csrf().disable();
 	}
 }

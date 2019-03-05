@@ -18,6 +18,7 @@ import com.spring.mvc.service.PersonService;
  *
  */
 @Controller
+@RequestMapping(value="/person")
 public class PersonController {
 
 	@Autowired
@@ -25,7 +26,7 @@ public class PersonController {
 
 	@RequestMapping(value = "/add-emp", method = RequestMethod.POST)
 	public ModelAndView addEmployee(@ModelAttribute PersonDto personDto, ModelAndView modelAndView) {
-//		System.out.println("person data:::" + personDto);
+
 		modelAndView.setViewName("view-emp");
 		personService.save(personDto);
 		

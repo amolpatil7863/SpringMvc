@@ -1,6 +1,6 @@
 <html>
 <body>
-	<form action="add-emp" method="post">
+	<form action="person/add-emp" method="post">
 		<label>Name</label> 
 		<input type="text" name="name"> 
 		<label>Country</label>

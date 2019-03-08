@@ -10,9 +10,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>securitywithjdbc Maven Webapp</name>
-	<!-- FIXME change it to the project's website -->
-	<url>http://www.example.com</url>
+	<name>SpringSecurityUsingJdbc</name>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -88,7 +86,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>securitywithjdbc</finalName>
+		<finalName>SpringSecurityUsingJdbc</finalName>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
 			<plugins>

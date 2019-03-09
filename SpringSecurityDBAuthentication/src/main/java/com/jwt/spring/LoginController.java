@@ -1,6 +1,7 @@
 package com.jwt.spring;
 
 import java.security.Principal;
+import java.util.logging.Logger;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class LoginController {
+	private static final Logger logger = Logger.getLogger(LoginController.class.getName());
 
 	@RequestMapping(value = "/")
 	public String welcome(Model model) {
@@ -21,7 +23,8 @@ public class LoginController {
 
 	@RequestMapping("/admin")
 	public String admin(Model model, Principal principal) {
-
+		logger.info(">>Admin Page");
+		logger.info(String.format("User>>> (%s)", principal));
 		String loggedInUserName = principal.getName();
 		model.addAttribute("user", loggedInUserName);
 		model.addAttribute("name", "Spring Security Custom Login Demo");
@@ -39,8 +42,7 @@ public class LoginController {
 	@RequestMapping(value = "/logout", method = RequestMethod.GET)
 	public String logout(ModelMap model) {
 
-		model.addAttribute("message",
-				"You have successfully logged off from application !");
+		model.addAttribute("message", "You have successfully logged off from application !");
 		return "logout";
 
 	}
